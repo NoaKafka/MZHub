@@ -1,6 +1,6 @@
 package kr.mzhub.mzhub.service.iface
 
-import kr.mzhub.mzhub.client.model.Ticker
+import kr.mzhub.mzhub.client.model.upbit.GetUpbitTicker.Ticker
 
 data class TickerResponseDto(
     // 종목 구분 코드
@@ -24,7 +24,7 @@ data class TickerResponseDto(
     val signed_change_price: String,
 
     // 부호가 있는 변화율
-    //0.0202366864,
+    // 0.0202366864,
     val signed_change_rate: String,
 
     // 전일 누적 거래량(UTC 0시 기준)
@@ -34,9 +34,9 @@ data class TickerResponseDto(
     // 24시간 누적 거래량
     // 27181.31137002,
     val acc_trade_volume_24h: String,
-){
+) {
     companion object {
-        fun of(ticker: Ticker): TickerResponseDto {
+        fun fromUpbit(ticker: Ticker): TickerResponseDto {
             return TickerResponseDto(
                 ticker.market,
                 ticker.trade_price,

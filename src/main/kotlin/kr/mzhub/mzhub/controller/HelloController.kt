@@ -16,7 +16,7 @@ class HelloController {
     private val logger = LoggerFactory.getLogger(HelloController::class.java)
 
     @GetMapping("/{id}")
-    fun hello(@PathVariable id: String):  ResponseEntity<String>{
+    fun hello(@PathVariable id: String): ResponseEntity<String> {
         logger.info("$id log in")
         return ResponseEntity.ok("Hello, $id")
     }

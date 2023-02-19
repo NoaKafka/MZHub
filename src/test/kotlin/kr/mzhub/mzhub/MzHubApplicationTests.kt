@@ -9,5 +9,4 @@ class MzHubApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }

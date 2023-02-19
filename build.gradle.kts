@@ -5,8 +5,8 @@ plugins {
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
+    id("org.jlleitschuh.gradle.ktlint") version "10.2.0"
 }
-
 group = "kr.mzhub"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
@@ -34,9 +34,9 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 
-    //Web Crawling
-//    testImplementation(kotlin("test-junit"))
-//    implementation("org.jsoup:jsoup")
+    // Web Crawling
+    testImplementation(kotlin("test-junit"))
+    implementation("org.jsoup:jsoup:1.15.4")
 }
 
 tasks.withType<KotlinCompile> {
