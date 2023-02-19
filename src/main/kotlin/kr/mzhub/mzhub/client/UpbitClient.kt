@@ -49,5 +49,4 @@ class UpbitClient(
             .retrieve()
             .bodyToMono(Array<Ticker>::class.java)
     }
-
 }
